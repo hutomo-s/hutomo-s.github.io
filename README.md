@@ -1,52 +1,70 @@
-![alt tag](https://raw.github.com/dogfalo/materialize/master/images/materialize.gif)
-===========
+# Getting Started with Create React App
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Dogfalo/materialize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-Materialize, a CSS Framework based on material design
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Current Version : v0.97.0
+## Available Scripts
 
-## Sass Requirements:
-- Ruby Sass 3.3+, LibSass 0.6+
+In the project directory, you can run:
 
-## Supported Browsers:
-Chrome 35+, Firefox 31+, Safari 7+, IE 10+
+### `npm start`
 
-## Changelog
-- v0.97.0 (June 21, 2015)
-  - **Documentation changed to use Official Google Icon web font**
-  - **Input errors added**
-  - Flicker on Firefox on dropdowns fixed
-  - Pagination made more responsive
-  - Modal now prevents scrolling
-  - Modal animation added
-  - Support for multiple modals added
-  - Programmatic control of FAB to open/close added
-  - Programmatic control of slider to play/pause added
-  - Plus many more bug fixes
-- v0.96.1 (April 6, 2015)
-  - Dropdown Fixes
-  - Materialize functions fixed for Meteor
-- v0.96.0 (April 1, 2015)
-  - **Toasts, transitions, scrollfire added under Materialize namespace**
-  - **Dropdown is now created as a child of its parent**
-  - Collapsibles supports nesting
-  - Modal Bottom Sheet added
-  - Indeterminate Checkboxes added
-  - New Checkbox Style Added
-  - Text Inputs supports placeholder/readonly
-  - Google Inbox-like Collapsible added
-  - Text Character Counter added
-  - Waves no longer breaks on SVG's
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- v0.95.3 (Feb 25, 2015)
-  - Parallax image loading / responsiveness fixes
-  - Date picker supports month/year as dropdown
-  - Dismissable collection items
-  - Avatar collection items
-  - Pagination Added
-  - ScrollFire fixes
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
+### `npm test`
 
-## Contributing
-[Please read CONTRIBUTING.md for more information](CONTRIBUTING.md)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
