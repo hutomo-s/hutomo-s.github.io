@@ -4,13 +4,19 @@ import quality from './../../assets/shield.png'
 import values from './../../assets/values.png'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import Navbar from '../../components/layout/Navbar/Navbar';
+import '../../assets/App.css';
 
 function HomePage() {
 
-  // reference: https://johnotu.medium.com/how-to-toggle-bootstrap-navbar-collapse-button-in-react-without-jquery-1d5c2fb0751c
-  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+//   const navStyle = {
+//     backgroundColor: '#fff',
+//   }
 
-  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+//   // reference: https://johnotu.medium.com/how-to-toggle-bootstrap-navbar-collapse-button-in-react-without-jquery-1d5c2fb0751c
+//   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+
+//   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   const handleClick = (e, sectionId) => {
     e.preventDefault();
@@ -22,7 +28,7 @@ function HomePage() {
 
     // collapse the navbar
     // short circuit operator
-    isNavCollapsed === true || setIsNavCollapsed(true)
+    //isNavCollapsed === true || setIsNavCollapsed(true)
   };
 
   // https://nordicgiant2.github.io/react-nice-resume-page/index.html#about
@@ -32,61 +38,52 @@ function HomePage() {
     fontSize: '1.2rem',
   }
 
-  const navStyle = {
-    backgroundColor: '#fff',
-  }
-
   return (
     <div className="App">
 
-        <nav className="navbar navbar-expand-lg navbar-light sticky-top shadow-sm" style={navStyle}>
-          <div class="container-fluid container">
-            <a class="navbar-brand" href="">Hutomo Sugianto</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={handleNavCollapse}>
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto me-auto- mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link text-body" aria-current="page" onClick={(e) => handleClick(e, "about")} href="#" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-body" onClick={(e) => handleClick(e, "education")} href="#">Education</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-body" onClick={(e) => handleClick(e, "experience")} href="#">Experience</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-body" onClick={(e) => handleClick(e, "skills")} href="#">Skills</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-body" onClick={(e) => handleClick(e, "portfolio")} href="#">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-body" onClick={(e) => handleClick(e, "connect")} href="#">Connect</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+        <Navbar />
 
         {/* jumbotron section */}
-        <div class="container col-xxl-8 px-4 py-5" id="about">
+        <div class="container col-xxl-8 px-4 py-5" id="jumbotron">
           <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
               <img src="https://getbootstrap.com/docs/5.0/examples/heroes/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
             </div>
             <div class="col-lg-6">
-              <h1 class="display-5 fw-bold lh-1 mb-3">Motivated Software Engineer</h1>
+              <h1 class="display-5 fw-bold lh-1 mb-3">Hi I'm Hutomo</h1>
               <p class="lead">
-                Highly motivated software engineer with 7 years of professional experience. 
-                Experienced in building IT team from scratch by creating technical and non-technical standards. 
-                Migrating painful insurance paperworks into a computerized system resulting in increasing productivity of marketing team to generate more revenue.</p>
+                Web Developer and Engineering Manager
+              </p>
+              <p class="lead">
+                based on Jakarta, Indonesia
+              </p>
               <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" onClick={(e) => handleClick(e, "education")}>Explore More</button>
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" onClick={(e) => handleClick(e, "about")}>Explore More</button>
                 <button type="button" class="btn btn-outline-secondary btn-lg px-4" onClick={(e) => handleClick(e, "connect")}>Connect</button>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* about section */}
+        <div className="bg-grey">
+          <div class="container col-xxl-8 px-4 py-5" id="about">
+            <div class="row g-5">
+              <div class="col-md-3">
+                <h4>
+                  <span style={spanStyle}>About Me</span>
+                </h4>
+              </div>
+
+              <div class="col-md-9">
+                <p>Highly motivated software engineer with 7 years of professional experience.</p>
+                <p>Manage and improve legacy platform in parallel with developing new platform with brownfield strategy.</p>
+                <p>Experienced in building IT team from scratch by creating technical and non-technical standards.</p>
+                <p>Migrating painful insurance paperworks into a computerized system resulting in increasing productivity of marketing team to generate more revenue.</p>
+              </div>
+              
+            </div>
+
           </div>
         </div>
 
@@ -127,44 +124,42 @@ function HomePage() {
 
         </div>
 
-        <hr className="col-6 container" />
-
         {/* core values section */}
-        <div class="container col-xxl-8 px-4 py-5" id="corevalues">
-          <div class="row g-5">
-            <div class="col-md-3">
-              <h4>
-                <span style={spanStyle}>Core Values</span>
-              </h4>
-            </div>
+        <div className="bg-grey">
+          <div class="container col-xxl-8 px-4 py-5" id="corevalues">
+            <div class="row g-5">
+              <div class="col-md-3">
+                <h4>
+                  <span style={spanStyle}>Core Values</span>
+                </h4>
+              </div>
 
-            <div class="col-md-9">
-              <div className="row">
-                <div className="col-md-4">
-                  <img src={quality} class="img-fluid p-5" alt="Commitment to Quality" />
-                  <h5>Commitment to Quality</h5>
-                  <p>We are not creating a perfect software, but we will do our best to deliver high quality code that can be used for a long-term period.</p>
-                </div>
+              <div class="col-md-9">
+                <div className="row">
+                  <div className="col-md-4">
+                    <img src={quality} class="img-fluid p-5" alt="Commitment to Quality" />
+                    <h5>Commitment to Quality</h5>
+                    <p>We are not creating a perfect software, but we will do our best to deliver high quality code that can be used for a long-term period.</p>
+                  </div>
 
-                <div className="col-md-4">
-                  <img src={custsatisfaction} class="img-fluid p-5" alt="Customer Centric Approach" />
-                  <h5>Customer Centric Approach</h5>
-                  <p>Our strategy in developing software is to understand the needs, wants and pain points of the customer. We expect our target market can use our product to satisfy their need, want and pain.</p>
-                </div>
+                  <div className="col-md-4">
+                    <img src={custsatisfaction} class="img-fluid p-5" alt="Customer Centric Approach" />
+                    <h5>Customer Centric Approach</h5>
+                    <p>Our strategy in developing software is to understand the needs, wants and pain points of the customer. We expect our target market can use our product to satisfy their need, want and pain.</p>
+                  </div>
 
-                <div className="col-md-4">
-                  <img src={values} class="img-fluid p-5" alt="Focus on Business Value" />
-                  <h5>Focus on Business Value</h5>
-                  <p>Priority management is very important in every business. We collaborate with product and business team to prioritize on projects and tasks that bring the maximum value for your business.</p>
+                  <div className="col-md-4">
+                    <img src={values} class="img-fluid p-5" alt="Focus on Business Value" />
+                    <h5>Focus on Business Value</h5>
+                    <p>Priority management is very important in every business. We collaborate with product and business team to prioritize on projects and tasks that bring the maximum value for your business.</p>
+                  </div>
                 </div>
               </div>
+              
             </div>
-            
+
           </div>
-
         </div>
-
-        <hr className="col-6 container" />
 
         {/* experience section */}
         <div class="container col-xxl-8 px-4 py-5" id="experience">
@@ -250,107 +245,105 @@ function HomePage() {
           </div>
         </div>
 
-        <hr className="col-6 container" />
-
         {/* skills section */}
-        <div class="container col-xxl-8 px-4 py-5" id="skills">
-          <div class="row g-5">
-            <div class="col-md-3">
-              <h4>
-                <span style={spanStyle}>Skills</span>
-              </h4>
-            </div>
+        <div className="bg-grey">
+          <div class="container col-xxl-8 px-4 py-5" id="skills">
+            <div class="row g-5">
+              <div class="col-md-3">
+                <h4>
+                  <span style={spanStyle}>Skills</span>
+                </h4>
+              </div>
 
-            <div class="col-md-9">
+              <div class="col-md-9">
 
-              <div className="row">
-                  <div className="col-md-4 mb-4">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 className="card-title">Programming Languages</h5>
-                        <ul class="icon-list">
-                          <li>JavaScript</li>
-                          <li>PHP</li>
-                          <li>Python</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                          <h5>Front End</h5>
-                          <ul class="icon-list">
-                            <li>ReactJS</li>
-                            <li>Webpack</li>
-                            <li>Bootstrap</li>
-                          </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-md-4 mb-4">
+                <div className="row">
+                    <div className="col-md-4 mb-4">
                       <div class="card">
                         <div class="card-body">
-                          <h5>Query Language</h5>
+                          <h5 className="card-title">Programming Languages</h5>
                           <ul class="icon-list">
-                            <li>GraphQL</li>
+                            <li>JavaScript</li>
+                            <li>PHP</li>
+                            <li>Python</li>
                           </ul>
                         </div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                          <h5>Database Engines</h5>
-                          <ul class="icon-list">
-                            <li>PostgreSQL</li>
-                            <li>MySQL</li>
-                            <li>MongoDB</li>
-                            <li>Redis</li>
-                          </ul>
-                        </div>
-                    </div>
-                  </div>
-
-                  <div className="col-md-4 mb-4">
+                    <div className="col-md-4 mb-4">
                       <div class="card">
-                        <div class="card-body">
-                          <h5>Web Frameworks</h5>
+                          <div class="card-body">
+                            <h5>Front End</h5>
+                            <ul class="icon-list">
+                              <li>ReactJS</li>
+                              <li>Webpack</li>
+                              <li>Bootstrap</li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="col-md-4 mb-4">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5>Query Language</h5>
+                            <ul class="icon-list">
+                              <li>GraphQL</li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div className="col-md-4 mb-4">
+                      <div class="card">
+                          <div class="card-body">
+                            <h5>Database Engines</h5>
+                            <ul class="icon-list">
+                              <li>PostgreSQL</li>
+                              <li>MySQL</li>
+                              <li>MongoDB</li>
+                              <li>Redis</li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div className="col-md-4 mb-4">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5>Web Frameworks</h5>
+                            <ul class="icon-list">
+                              <li>Laravel</li>
+                              <li>Slim</li>
+                              <li>Django</li>
+                              <li>ExpressJS</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                    <div className="col-md-4 mb-4">
+                      <div class="card">
+                          <div class="card-body">
+                          <h5>Deployment</h5>
                           <ul class="icon-list">
-                            <li>Laravel</li>
-                            <li>Slim</li>
-                            <li>Django</li>
-                            <li>ExpressJS</li>
+                            <li>CentOS</li>
+                            <li>Ubuntu</li>
+                            <li>nginx</li>
+                            <li>php-fpm</li>
+                            <li>Ansible</li>
                           </ul>
                         </div>
                       </div>
                     </div>
 
-                  <div className="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                        <h5>Deployment</h5>
-                        <ul class="icon-list">
-                          <li>CentOS</li>
-                          <li>Ubuntu</li>
-                          <li>nginx</li>
-                          <li>php-fpm</li>
-                          <li>Ansible</li>
-                        </ul>
-                      </div>
-                    </div>
                   </div>
-
-                </div>
+              </div>
+              
             </div>
-            
           </div>
         </div>
-
-        <hr className="col-6 container" />
 
         {/* portfolio section */}
         <div class="container col-xxl-8 px-4 py-5" id="portfolio">
@@ -376,41 +369,41 @@ function HomePage() {
 
                 <div className="row mb-3"></div>
 
-                <h5>Abc App</h5>
+                <h5>Timer App</h5>
                 
                 <span className="d-block">Lorem Ipsum</span>
                 <span className="d-block mb-3"></span>
 
                 <ul class="icon-list">
-                  <li>Abc App Live Demo <a href="#" target="_blank" rel="noreferrer">#</a></li>
-                  <li>Abc App Github <a href="#" target="_blank" rel="noreferrer">#</a></li>
+                  <li>Timer App Live Demo <a href="#" target="_blank" rel="noreferrer">#</a></li>
+                  <li>Timer App Github <a href="#" target="_blank" rel="noreferrer">#</a></li>
                 </ul>
 
             </div>
           </div>
         </div>
 
-        <hr className="col-6 container" />
-
         {/* connect section */}
-        <div class="container col-xxl-8 px-4 py-5" id="connect">
-          <div class="row g-5">
-            <div class="col-md-3">
-              <h4>
-                <span style={spanStyle}>Connect with Me</span>
-              </h4>
-            </div>
+        <div className="bg-grey">
+          <div class="container col-xxl-8 px-4 py-5" id="connect">
+            <div class="row g-5">
+              <div class="col-md-3">
+                <h4>
+                  <span style={spanStyle}>Connect with Me</span>
+                </h4>
+              </div>
 
-            <div class="col-md-9">
-              <h5>I'm happy to connect with you :)</h5>
-              <p>Keep in touch for further collaboration</p>
-              
-              <ul class="icon-list">
-                <li>LinkedIn <a href="https://www.linkedin.com/in/hutomo-sugianto-763414107/" target="_blank" rel="noreferrer">Hutomo Sugianto</a></li>
-                <li>Instagram <a href="https://instagram.com/hutomo.sugianto" target="_blank" rel="noreferrer">@hutomo.sugianto</a></li>
-                <li>Medium <a href="https://medium.com/@hutomo_s" target="_blank" rel="noreferrer">@hutomo_s</a></li>
-              </ul>
+              <div class="col-md-9">
+                <h5>I'm happy to connect with you :)</h5>
+                <p>Keep in touch for further collaboration</p>
+                
+                <ul class="icon-list">
+                  <li>LinkedIn <a href="https://www.linkedin.com/in/hutomo-sugianto-763414107/" target="_blank" rel="noreferrer">Hutomo Sugianto</a></li>
+                  <li>Instagram <a href="https://instagram.com/hutomo.sugianto" target="_blank" rel="noreferrer">@hutomo.sugianto</a></li>
+                  <li>Medium <a href="https://medium.com/@hutomo_s" target="_blank" rel="noreferrer">@hutomo_s</a></li>
+                </ul>
 
+              </div>
             </div>
           </div>
         </div>
