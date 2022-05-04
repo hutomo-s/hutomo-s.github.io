@@ -1,3 +1,10 @@
 .bg-grey {
     background-color: #f6f6f6;
 }
+
+/* https://nordicgiant2.github.io/react-nice-resume-page/index.html#about */
+.underline-blue {
+    border-bottom: 2px solid #0762f9;
+    padding-bottom: 6px;
+    font-size: 1.2rem;
+}

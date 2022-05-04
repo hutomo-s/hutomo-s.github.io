@@ -1,20 +1,13 @@
-import custsatisfaction from './../../assets/customer-satisfaction.png'
-import quality from './../../assets/shield.png'
-import values from './../../assets/values.png'
+import custsatisfaction from 'assets/customer-satisfaction.png'
+import quality from 'assets/shield.png'
+import values from 'assets/values.png'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import Navbar from '../../components/layout/Navbar/Navbar';
-import '../../assets/App.css';
-import {handleClickHash} from '../../utils/Navigation/navigation';
+import Navbar from 'components/navbar/Navbar';
+import 'assets/app.css';
+import {handleClickHash} from 'utils/navigation/navigation';
 
 function HomePage() {
-
-  // https://nordicgiant2.github.io/react-nice-resume-page/index.html#about
-  const spanStyle = {
-    borderBottom: '2px solid #0762f9',
-    paddingBottom: '6px',
-    fontSize: '1.2rem',
-  }
 
   return (
     <div className="App">
@@ -49,7 +42,7 @@ function HomePage() {
             <div class="row g-5">
               <div class="col-md-3">
                 <h4>
-                  <span style={spanStyle}>About Me</span>
+                  <span className="underline-blue">About Me</span>
                 </h4>
               </div>
 
@@ -70,7 +63,7 @@ function HomePage() {
           <div class="row g-5">
             <div class="col-md-3">
               <h4>
-                <span style={spanStyle}>Education</span>
+                <span className="underline-blue">Education</span>
               </h4>
             </div>
 
@@ -88,7 +81,7 @@ function HomePage() {
           <div class="row g-5">
             <div class="col-md-3">
               <h4>
-                <span style={spanStyle}>Certification</span>
+                <span className="underline-blue">Certification</span>
               </h4>
             </div>
 
@@ -108,7 +101,7 @@ function HomePage() {
             <div class="row g-5">
               <div class="col-md-3">
                 <h4>
-                  <span style={spanStyle}>Core Values</span>
+                  <span className="underline-blue">Core Values</span>
                 </h4>
               </div>
 
@@ -144,7 +137,7 @@ function HomePage() {
           <div class="row g-5">
             <div class="col-md-3">
               <h4>
-                <span style={spanStyle}>Experience</span>
+                <span className="underline-blue">Experience</span>
               </h4>
             </div>
 
@@ -229,7 +222,7 @@ function HomePage() {
             <div class="row g-5">
               <div class="col-md-3">
                 <h4>
-                  <span style={spanStyle}>Skills</span>
+                  <span className="underline-blue">Skills</span>
                 </h4>
               </div>
 
@@ -329,7 +322,7 @@ function HomePage() {
             
             <div class="col-md-3">
               <h4>
-                <span style={spanStyle}>Portfolio</span>
+                <span className="underline-blue">Portfolio</span>
               </h4>
             </div>
 
@@ -367,7 +360,7 @@ function HomePage() {
             <div class="row g-5">
               <div class="col-md-3">
                 <h4>
-                  <span style={spanStyle}>Connect with Me</span>
+                  <span className="underline-blue">Connect with Me</span>
                 </h4>
               </div>
 

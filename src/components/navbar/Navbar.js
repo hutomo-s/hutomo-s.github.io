@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {handleClickHash} from '../../../utils/Navigation/navigation';
+import {handleClickHash} from 'utils/navigation/navigation';
 
 function Navbar() {
     
