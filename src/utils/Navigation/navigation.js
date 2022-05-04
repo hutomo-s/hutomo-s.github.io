@@ -6,7 +6,4 @@ export const handleClickHash = (e, sectionId) => {
     let element = document.getElementById(sectionId);
     element && element.scrollIntoView({ behavior: "smooth", block: "start"});
 
-    // collapse the navbar
-    // short circuit operator
-    //isNavCollapsed === true || setIsNavCollapsed(true)
 };
