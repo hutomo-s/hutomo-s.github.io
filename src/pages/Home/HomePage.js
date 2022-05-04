@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import custsatisfaction from './../../assets/customer-satisfaction.png'
 import quality from './../../assets/shield.png'
 import values from './../../assets/values.png'
@@ -6,30 +5,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Navbar from '../../components/layout/Navbar/Navbar';
 import '../../assets/App.css';
+import {handleClickHash} from '../../utils/Navigation/navigation';
 
 function HomePage() {
-
-//   const navStyle = {
-//     backgroundColor: '#fff',
-//   }
-
-//   // reference: https://johnotu.medium.com/how-to-toggle-bootstrap-navbar-collapse-button-in-react-without-jquery-1d5c2fb0751c
-//   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-
-//   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
-
-  const handleClick = (e, sectionId) => {
-    e.preventDefault();
-
-    // https://stackoverflow.com/questions/61196420/react-navigation-that-will-smooth-scroll-to-section-of-the-page
-
-    let element = document.getElementById(sectionId);
-    element && element.scrollIntoView({ behavior: "smooth", block: "start"});
-
-    // collapse the navbar
-    // short circuit operator
-    //isNavCollapsed === true || setIsNavCollapsed(true)
-  };
 
   // https://nordicgiant2.github.io/react-nice-resume-page/index.html#about
   const spanStyle = {
@@ -58,8 +36,8 @@ function HomePage() {
                 based on Jakarta, Indonesia
               </p>
               <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" onClick={(e) => handleClick(e, "about")}>Explore More</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4" onClick={(e) => handleClick(e, "connect")}>Connect</button>
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" onClick={(e) => handleClickHash(e, "about")}>Explore More</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4" onClick={(e) => handleClickHash(e, "connect")}>Connect</button>
               </div>
             </div>
           </div>
