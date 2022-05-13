@@ -19,20 +19,15 @@ function Portfolio() {
 
             <ul className="icon-list">
               <li>Premiro Web in <a href="https://www.premiro.com" target="_blank" rel="noreferrer">https://www.premiro.com</a></li>
-              <li>Premiro Slim Dashboard for Back Office Service</li>
-              <li>Premiro Slim API as Back End Services for Premiro Web (Internal) and External Partners</li>
             </ul>
 
             <div className="row mb-3"></div>
 
             <h5>Timer App</h5>
 
-            <span className="d-block">Lorem Ipsum</span>
-            <span className="d-block mb-3"></span>
-
             <ul className="icon-list">
-              <li>Timer App Live Demo <a href="#" target="_blank" rel="noreferrer">#</a></li>
-              <li>Timer App Github <a href="#" target="_blank" rel="noreferrer">#</a></li>
+              <li>Timer App Live Demo <a href="https://hutomo-s.github.io/timer-app/" target="_blank" rel="noreferrer">https://hutomo-s.github.io/timer-app</a></li>
+              <li>Timer App Github <a href="https://github.com/hutomo-s/timer-app " target="_blank" rel="noreferrer">https://github.com/hutomo-s/timer-app</a></li>
             </ul>
 
           </div>
